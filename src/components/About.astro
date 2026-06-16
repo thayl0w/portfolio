@@ -1,0 +1,60 @@
+---
+import { about } from '../data/portfolio';
+---
+
+<section id="about" class="bg-surface-muted py-20 sm:py-28">
+  <div class="section-container">
+    <div class="max-w-3xl">
+      <h2 class="section-heading">About Me</h2>
+      <p class="section-subheading">
+        A blend of code, creativity, and conversion-focused marketing.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-8 lg:grid-cols-5">
+      <div class="card lg:col-span-3">
+        <div class="space-y-5 leading-relaxed text-gray-700">
+          {about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4 lg:col-span-2">
+        <div class="card group">
+          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent/30 text-navy-deep transition-transform group-hover:scale-110">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-navy">Development</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Full-stack web apps with modern frameworks, clean APIs, and responsive design.
+          </p>
+        </div>
+
+        <div class="card group">
+          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent/30 text-navy-deep transition-transform group-hover:scale-110">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-navy">Marketing</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Data-driven campaigns, funnel optimization, and automation that converts.
+          </p>
+        </div>
+
+        <div class="card group">
+          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent/30 text-navy-deep transition-transform group-hover:scale-110">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-navy">Web Presence</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Professional websites and landing pages built for speed and results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

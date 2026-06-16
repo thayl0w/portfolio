@@ -1,0 +1,22 @@
+---
+pid: 23024
+cwd: "C:\Users\Doneverse\Portfolio"
+command: "Set-Location \"C:\\Users\\Doneverse\\Portfolio\"; npm run dev"
+started_at: 2026-06-16T22:14:43.213Z
+running_for_ms: 65002    
+---
+
+> mtln-portfolio@1.0.0 dev
+> astro dev
+
+06:14:46 [types] Generated 2ms
+06:14:46 [content] Syncing content
+06:14:46 [content] Synced content
+06:14:46 [vite] Re-optimizing dependencies because vite config has changed
+
+ astro  v5.18.2 ready in 960 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+
+06:14:46 watching for file changes...

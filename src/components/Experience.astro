@@ -1,0 +1,47 @@
+---
+import { experience } from '../data/portfolio';
+---
+
+<section id="experience" class="bg-surface py-20 sm:py-28">
+  <div class="section-container">
+    <h2 class="section-heading">Experience</h2>
+    <p class="section-subheading">
+      Professional journey across development, marketing, and service.
+    </p>
+
+    <div class="mt-12 space-y-6">
+      {
+        experience.map((role, index) => (
+          <article class="card group">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div class="flex gap-4">
+                <div class="hidden h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/30 text-sm font-bold text-navy-deep ring-1 ring-accent/40 transition-all group-hover:bg-accent/50 sm:flex">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-navy transition-colors group-hover:text-navy-deep">
+                    {role.title}
+                  </h3>
+                  <p class="mt-1 font-medium text-navy-deep">{role.company}</p>
+                  <p class="mt-1 text-sm text-gray-500">{role.location}</p>
+                </div>
+              </div>
+              <span class="inline-flex shrink-0 items-center rounded-lg border border-gray-200 bg-surface-muted px-3 py-1 text-sm font-medium text-gray-600">
+                {role.period}
+              </span>
+            </div>
+
+            <ul class="mt-6 space-y-3 border-t border-gray-200 pt-6">
+              {role.bullets.map((bullet) => (
+                <li class="flex gap-3 text-sm leading-relaxed text-gray-700">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

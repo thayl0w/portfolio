@@ -1,0 +1,63 @@
+---
+import { projects } from '../data/portfolio';
+---
+
+<section id="projects" class="bg-surface-muted py-20 sm:py-28">
+  <div class="section-container">
+    <h2 class="section-heading">Projects</h2>
+    <p class="section-subheading">
+      Selected work spanning web development, marketing, and automation.
+    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2">
+      {
+        projects.map((project) => (
+          <article class="card group overflow-hidden p-0 hover:-translate-y-1">
+            <div class="relative aspect-video overflow-hidden bg-surface-alt">
+              <img
+                src={project.image}
+                alt={project.title}
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent"></div>
+              <div class="absolute inset-0 bg-accent/0 transition-colors duration-300 group-hover:bg-accent/10"></div>
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy transition-colors group-hover:text-navy-deep">
+                {project.title}
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-gray-600">
+                {project.description}
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                {project.tech.map((tech) => (
+                  <span class="rounded-md bg-surface-muted px-2.5 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-200 transition-all duration-300 group-hover:ring-accent/40 group-hover:text-navy-deep">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a href={project.liveUrl} class="btn-outline" target="_blank" rel="noopener noreferrer">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                  Live Demo
+                </a>
+                <a href={project.githubUrl} class="btn-outline" target="_blank" rel="noopener noreferrer">
+                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.695-1.23-2.28-.42-.48-1.155-.165-1.155-.165-.63.405-.015.42-.015.42.615.045 1.155.63 1.155.63.54.93 1.41.66 1.755.51.06-.39.24-.66.435-.81-1.5-.165-3.075-.75-3.075-3.33 0-.735.27-1.335.705-1.805-.075-.165-.315-.81.075-1.665 0 0 .585-.18 1.92.69.555-.15 1.155-.225 1.755-.225.6 0 1.2.075 1.755.225 1.335-.87 1.92-.69 1.92-.69.39.855.15 1.5.075 1.665.435.47.705 1.07.705 1.805 0 2.595-1.59 3.165-3.09 3.33.24.21.465.615.465 1.245 0 .9-.015 1.62-.015 1.845 0 .315.225.69.84.57A8.997 8.997 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"></path>
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+import { skills } from '../data/portfolio';
+import SkillIcon from './SkillIcon.astro';
+---
+
+<section id="skills" class="bg-surface py-20 sm:py-28">
+  <div class="section-container">
+    <div class="text-center">
+      <h2 class="section-heading">Skills &amp; Tools</h2>
+      <p class="section-subheading mx-auto">
+        Technologies and platforms I work with daily. Click any tool to visit its official site.
+      </p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 md:grid-cols-4 lg:grid-cols-5">
+      {
+        skills.map((skill) => (
+          <a
+            href={skill.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="skill-card group"
+            title={`Visit ${skill.name}`}
+          >
+            <div class="flex h-20 w-20 items-center justify-center rounded-2xl bg-surface-muted ring-1 ring-gray-200 transition-all duration-300 group-hover:scale-105 group-hover:bg-accent/25 group-hover:ring-accent group-hover:shadow-md group-hover:shadow-accent/20">
+              <SkillIcon skill={skill} class="h-12 w-12 transition-transform duration-300 group-hover:scale-110" />
+            </div>
+            <span class="text-center text-sm font-semibold text-navy transition-colors duration-300 group-hover:text-navy-deep">
+              {skill.name}
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

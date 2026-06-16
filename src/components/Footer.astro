@@ -1,0 +1,16 @@
+---
+import { site } from '../data/portfolio';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-gray-200 bg-surface-muted py-8">
+  <div class="section-container flex flex-col items-center justify-between gap-4 sm:flex-row">
+    <p class="text-sm text-gray-600">
+      &copy; {year} {site.name}. All rights reserved.
+    </p>
+    <p class="text-sm text-gray-500">
+      Built with <span class="font-medium text-navy-deep">Astro</span> &amp; <span class="font-medium text-navy-deep">Tailwind CSS</span>
+    </p>
+  </div>
+</footer>

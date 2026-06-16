@@ -1,0 +1,73 @@
+---
+import type { Skill } from '../data/portfolio';
+import {
+  customIconColors,
+  getSimpleIcon,
+  simpleIconMap,
+  type CustomIconId,
+} from '../lib/skillIcons';
+
+interface Props {
+  skill: Skill;
+  class?: string;
+}
+
+const { skill, class: className = 'h-12 w-12' } = Astro.props;
+
+let brandColor = '#0f172a';
+let path = '';
+
+if (skill.iconType === 'brand' && skill.id in simpleIconMap) {
+  const icon = getSimpleIcon(simpleIconMap[skill.id as keyof typeof simpleIconMap]);
+  if (icon) {
+    path = icon.path;
+    brandColor = `#${icon.hex}`;
+  }
+} else if (skill.iconType === 'custom') {
+  brandColor = customIconColors[skill.id as CustomIconId];
+}
+---
+
+{
+  skill.iconType === 'brand' && path && (
+    <svg
+      class={className}
+      viewBox="0 0 24 24"
+      role="img"
+      aria-hidden="true"
+      style={`color: ${brandColor}`}
+    >
+      <path fill="currentColor" d={path} />
+    </svg>
+  )
+}
+
+{
+  skill.id === 'gohighlevel' && (
+    <svg class={className} viewBox="0 0 24 24" role="img" aria-hidden="true" style={`color: ${brandColor}`}>
+      <rect x="2" y="4" width="20" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" />
+      <path d="M7.5 16V8l4.25 5L16 8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="17.5" cy="8" r="1.75" fill="currentColor" />
+    </svg>
+  )
+}
+
+{
+  skill.id === 'systemeio' && (
+    <svg class={className} viewBox="0 0 24 24" role="img" aria-hidden="true" style={`color: ${brandColor}`}>
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5" />
+      <text x="12" y="16" text-anchor="middle" fill="currentColor" font-family="system-ui,sans-serif" font-size="11" font-weight="700">S</text>
+    </svg>
+  )
+}
+
+{
+  skill.id === 'clickfunnels' && (
+    <svg class={className} viewBox="0 0 24 24" role="img" aria-hidden="true" style={`color: ${brandColor}`}>
+      <path fill="currentColor" d="M4 5h16l-2.5 4.5H6.5L4 5z" opacity="0.45" />
+      <path fill="currentColor" d="M6.5 9.5h11l-2 4H8.5l-2-4z" opacity="0.7" />
+      <path fill="currentColor" d="M8.5 13.5h7l-1.75 3.5h-3.5L8.5 13.5z" />
+      <path fill="currentColor" d="M10.25 17h3.5l-.875 4h-1.75l-.875-4z" opacity="0.85" />
+    </svg>
+  )
+}
