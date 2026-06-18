@@ -20,10 +20,9 @@ export const site = {
 export const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Education & Certificates', href: '#education-certificates' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Certificates', href: '#certificates' },
-  { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -177,41 +176,50 @@ export const projects = [
   },
 ];
 
-export const certificates = [
+export type EducationCertificateType = 'degree' | 'certificate';
+
+export interface EducationCertificate {
+  title: string;
+  date: string;
+  institution: string;
+  pdfUrl: string;
+  type: EducationCertificateType;
+}
+
+export const educationCertificates: EducationCertificate[] = [
   {
-    title: 'Web Development Fundamentals',
-    issuer: 'BYU – Idaho',
-    image: '/certificates/cert-1.jpg',
-    year: '2024',
+    title: 'Bachelor of Science in Software Development',
+    date: 'Feb 2026',
+    institution: 'Brigham Young University-Idaho',
+    pdfUrl: '/certificates/bachelor-software-development.pdf',
+    type: 'degree',
   },
   {
-    title: 'Digital Marketing Specialist',
-    issuer: 'Meta Blueprint',
-    image: '/certificates/cert-2.jpg',
-    year: '2023',
+    title: 'Associate of Applied Science in Software Development',
+    date: 'Dec 2025',
+    institution: 'Brigham Young University-Idaho',
+    pdfUrl: '/certificates/associate-software-development.pdf',
+    type: 'degree',
   },
   {
-    title: 'JavaScript Essentials',
-    issuer: 'Online Certification',
-    image: '/certificates/cert-3.jpg',
-    year: '2024',
+    title: 'Web Development Certificate',
+    date: 'Oct 2025',
+    institution: 'Brigham Young University-Idaho',
+    pdfUrl: '/certificates/web-development.pdf',
+    type: 'certificate',
   },
   {
-    title: 'SEO & Content Strategy',
-    issuer: 'Online Certification',
-    image: '/certificates/cert-4.jpg',
-    year: '2023',
+    title: 'Software Development Certificate',
+    date: 'Dec 2025',
+    institution: 'Brigham Young University-Idaho',
+    pdfUrl: '/certificates/software-development-certificate.pdf',
+    type: 'certificate',
+  },
+  {
+    title: 'Web & Computer Programming Certificate',
+    date: 'Apr 2025',
+    institution: 'Brigham Young University-Idaho',
+    pdfUrl: '/certificates/web-computer-programming.pdf',
+    type: 'certificate',
   },
 ];
-
-export const education = {
-  school: 'Brigham Young University – Idaho',
-  degree: 'Bachelor of Science in Software Development',
-  period: '2024 – Present',
-  location: 'Rexburg, Idaho · Online',
-  details: [
-    'Coursework in full-stack web development, database systems, software engineering, and computer science fundamentals.',
-    'Hands-on projects using modern development tools, version control, and collaborative software practices.',
-    'Building a strong foundation in problem-solving, algorithms, and professional software development workflows.',
-  ],
-};
