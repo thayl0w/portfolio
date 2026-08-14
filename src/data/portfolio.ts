@@ -166,13 +166,13 @@ export const projects = [
     githubUrl: '#',
   },
   {
-    title: 'Lead Capture Funnel',
+    title: 'VELORA Ritual & Wellness Funnel',
     description:
-      'End-to-end lead generation funnel with landing page, email automation, and CRM integration using Systeme.io.',
-    image: '/projects/project-4.jpg',
-    tech: ['ClickFunnels', 'Systeme.io', 'Meta Ads'],
-    liveUrl: '#',
-    githubUrl: '#',
+      'Three-page ritual wellness funnel: landing → multi-step Ritual Reset Quiz → discovery-call booking. Sage/porcelain design system, matching before/after results, opt-in form, and conversion-focused layout. Live on Vercel.',
+    image: '/projects/velora.jpg',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+    liveUrl: 'https://velora-funnel.vercel.app',
+    githubUrl: 'https://github.com/thayl0w/velora-funnel',
   },
 ];
 
