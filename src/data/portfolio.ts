@@ -183,6 +183,51 @@ export const projects = [
     liveUrl: 'https://nocturne-house.vercel.app',
     githubUrl: 'https://github.com/thayl0w/nocturne-house',
   },
+  {
+    title: 'LifeBudget',
+    description:
+      'A budgeting web app for planning expenses and tracking financial goals. Focused expense categories, responsive layouts, and MongoDB-backed records — live on Render.',
+    image: '/projects/lifebudget.jpg',
+    tech: ['React', 'MongoDB', 'Render'],
+    liveUrl: 'https://lifebudget-web.onrender.com/',
+    githubUrl: '#',
+  },
+  {
+    title: 'Budgeting Buddy',
+    description:
+      'A practical budgeting web app for tracking spending and keeping day-to-day finances organized. Clear expense organization and a straightforward user flow — live on Render.',
+    image: '/projects/budgeting-buddy-landing.png',
+    tech: ['React', 'Render', 'Budgeting'],
+    liveUrl: 'https://budgetingbuddy.onrender.com/',
+    githubUrl: '#',
+  },
+  {
+    title: 'Lunch Mate',
+    description:
+      'A meal planning and discovery web app with browse-and-select flow, dynamic rendering, and MongoDB-backed menu and order data. Published on Render.',
+    image: '/projects/lunch-mate-landing.png',
+    tech: ['React', 'Express', 'MongoDB'],
+    liveUrl: 'https://cse325-visioncoders-ytz0.onrender.com/',
+    githubUrl: '#',
+  },
+  {
+    title: 'SleepOutside',
+    description:
+      'Collaborative WDD 330 frontend project from the SleepOutside starter. Practical JavaScript, responsive UI, and team delivery — live on Netlify.',
+    image: '/projects/sleep-outside-landing.png',
+    tech: ['JavaScript', 'Netlify', 'WDD 330'],
+    liveUrl: 'https://wdd330team08.netlify.app/',
+    githubUrl: '#',
+  },
+  {
+    title: 'To-Do List App',
+    description:
+      'A task management web app for tracking daily work through a simple to-do workflow. Clean interface, straightforward actions, published on Render.',
+    image: '/projects/todolist.png',
+    tech: ['React', 'Render', 'Productivity'],
+    liveUrl: 'https://todolist-f8fc.onrender.com',
+    githubUrl: '#',
+  },
 ];
 
 export type EducationCertificateType = 'degree' | 'certificate';
