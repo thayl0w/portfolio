@@ -174,6 +174,15 @@ export const projects = [
     liveUrl: 'https://velora-funnel.vercel.app',
     githubUrl: 'https://github.com/thayl0w/velora-funnel',
   },
+  {
+    title: 'NOCTURNE HOUSE — Instrument Showroom',
+    description:
+      'Premium multi-page instrument house: landing → expanded shop archive (7 families, filters, product detail) → Soundprint quiz → private audition booking. Dark luxury design with local imagery and Web Audio tone cues.',
+    image: '/projects/nocturne.jpg',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+    liveUrl: 'https://nocturne-house.vercel.app',
+    githubUrl: 'https://github.com/thayl0w/nocturne-house',
+  },
 ];
 
 export type EducationCertificateType = 'degree' | 'certificate';
